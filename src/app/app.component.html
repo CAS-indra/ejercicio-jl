@@ -2,3 +2,17 @@
 <router-outlet></router-outlet>
 <app-cabecera></app-cabecera>
 
+<h3 [style.color]="color"> Tengo {{ transacciones.length }} proyectos</h3>
+
+<div *ngFor="let transaccion of transacciones">
+  <span [ngClass]="{ spent: transaccion.kind=='spent', income: transaccion.kind=='income'}">
+    🐱‍👤 {{transaccion.name}}: {{transaccion.amount}}
+  </span>
+</div>
+<p></p>
+<div>
+  <span [ngClass]="{ spent: balance()<0, income: balance()>0}">
+    Tengo {{balance()}}
+  </span>
+</div>
+
