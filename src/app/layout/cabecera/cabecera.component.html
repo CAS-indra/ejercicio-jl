@@ -1,1 +1,24 @@
-<p>cabecera works!</p>
+<header>
+  <h1> {{empresa}}
+    <nav>
+      <a routerLink="contacto"> <!-- Con routerLink la pagina no se carga de nuevo, es link directo -->
+        Contacto
+      </a>
+    </nav>
+    <nav>
+      <a routerLink="about">
+        About
+      </a>
+    </nav>
+    <nav>
+      <a routerLink="auth/login">
+        Login
+      </a>
+    </nav>
+    <nav>
+      <a routerLink="transaccion/new">
+        Transaccion
+      </a>
+    </nav>
+  </h1>
+</header>
