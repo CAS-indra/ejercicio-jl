@@ -19,6 +19,9 @@ const routes: Routes = [
   {
     path: 'transaccion/new',
     loadChildren: () => import('./nueva-transaccion/nueva-transaccion.module').then(m => m.NuevaTransaccionModule) },
+  { 
+    path: 'transaccion', 
+    loadChildren: () => import('./project-editor/project-editor.module').then(m => m.ProjectEditorModule) },
 ];
 
 @NgModule({
